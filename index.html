@@ -8,25 +8,28 @@
     <script>
         tailwind.config = {
             theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            light: '#d4a373',
-                            DEFAULT: '#a47148',
-                            dark: '#6f4518',
-                        },
-                        secondary: {
-                            light: '#f6e8c3',
-                            DEFAULT: '#d4b483',
-                            dark: '#b38b4a',
-                        },
-                        accent: {
-                            light: '#ffdf91',
-                            DEFAULT: '#d4af37',
-                            dark: '#aa8c2d',
-                        }
-                    }
+            extend: {
+                colors: {
+                // Noir élégant
+                noir: {
+                    light: '#3a3a3a',   // Noir légèrement éclairci
+                    DEFAULT: '#1a1a1a', // Noir profond
+                    dark: '#0a0a0a',    // Noir presque pur
+                },
+                // Marron chaleureux
+                marron: {
+                    light: '#a78a7f',   // Marron clair (cuir)
+                    DEFAULT: '#6b4f4b', // Marron terreux
+                    dark: '#4a302b',    // Marron foncé (chocolat)
+                },
+                // Or métallique
+                or: {
+                    light: '#f8e6c0',   // Or pâle
+                    DEFAULT: '#d4af37', // Or classique
+                    dark: '#b08d26',    // Or vieilli
                 }
+                }
+            }
             }
         }
     </script>
