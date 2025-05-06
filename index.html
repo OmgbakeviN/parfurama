@@ -105,55 +105,108 @@
     <!-- </main> -->
     
     <!-- Hero Section avec diaporama -->
-<section class="relative h-screen overflow-hidden">
-    <!-- Diaporama -->
-    <div class="absolute inset-0 z-0">
-      <!-- Image 1 (par défaut visible) -->
-      <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" 
-           style="background-image: url('https://images.unsplash.com/photo-1712565223772-1e569a991cef?q=80&w=434&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" 
-           id="slide1"></div>
+    <section class="relative h-screen overflow-hidden">
+        <!-- Diaporama -->
+        <div class="absolute inset-0 z-0">
+        <!-- Image 1 (par défaut visible) -->
+        <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" 
+            style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipOuZ1W_JH6Nxzxa5bkCPZA-5bnl0MvxcFZkVbnM=s680-w680-h510-rw');" 
+            id="slide1"></div>
+        
+        <!-- Image 2 (cachée par défaut) -->
+        <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" 
+            style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipNNaJoMi1MMCUt5mAbBhMrfLeq--iW3lGldqgTI=s680-w680-h510-rw');" 
+            id="slide2"></div>
+        
+        <!-- Image 3 (cachée par défaut) -->
+        <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" 
+            style="background-image: url('https://images.unsplash.com/photo-1693960794723-09c5e02264e3?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" 
+            id="slide3"></div>
+        
+        <!-- Overlay noir pour meilleure lisibilité -->
+        <div class="absolute inset-0 bg-noir/60"></div>
+        </div>
+    
+        <!-- Contenu texte -->
+        <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
+        <!-- Nom de la boutique -->
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-or mb-4 animate-fadeIn">
+            Parfurama
+        </h1>
+        
+        <!-- Slogan -->
+        <p class="text-xl md:text-2xl text-or-light max-w-2xl mx-auto mb-8 animate-fadeIn delay-100">
+            Elevation et exaltation des sens 
+        </p>
+        
+        <!-- Bouton CTA -->
+        <div class="animate-fadeIn delay-200">
+            <a href="#catalogue" class="bg-or hover:bg-or-dark text-noir font-bold py-3 px-8 rounded-full text-lg transition transform hover:scale-105">
+            Découvrir nos créations
+            </a>
+        </div>
+        
+        <!-- Indicateurs de diaporama -->
+        <div class="absolute bottom-10 flex space-x-2">
+            <button class="w-3 h-3 rounded-full bg-or/80 hover:bg-or transition slide-dot active" data-slide="1"></button>
+            <button class="w-3 h-3 rounded-full bg-or/80 hover:bg-or transition slide-dot" data-slide="2"></button>
+            <button class="w-3 h-3 rounded-full bg-or/80 hover:bg-or transition slide-dot" data-slide="3"></button>
+        </div>
+        </div>
+    </section>
+    <!-- about section -->
+    <section class="py-20 bg-noir text-or-light">
+        <div class="container mx-auto px-6">
+          <!-- Titre Section -->
+          <h2 class="text-4xl md:text-5xl font-serif text-center mb-16 text-or">
+            <span class="border-b-2 border-or pb-2">Notre Histoire</span>
+          </h2>
       
-      <!-- Image 2 (cachée par défaut) -->
-      <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" 
-           style="background-image: url('https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=880&q=80');" 
-           id="slide2"></div>
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Image Gauche (Atelier) -->
+            <div class="lg:w-1/2 relative group">
+              <img 
+                src="https://images.unsplash.com/photo-1615634262417-98ba8a8bd9b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                alt="Atelier Parfurama" 
+                class="rounded-lg shadow-xl w-full h-auto border-2 border-or/20 group-hover:border-or transition-all duration-500"
+              >
+              <div class="absolute -inset-4 border border-or/30 rounded-lg pointer-events-none group-hover:opacity-0 transition-opacity duration-300"></div>
+            </div>
       
-      <!-- Image 3 (cachée par défaut) -->
-      <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" 
-           style="background-image: url('https://images.unsplash.com/photo-1693960794723-09c5e02264e3?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" 
-           id="slide3"></div>
+            <!-- Texte Droite -->
+            <div class="lg:w-1/2">
+              <h3 class="text-3xl font-serif text-or mb-6">L'Art du Parfum sur Mesure</h3>
+              
+              <div class="space-y-6 text-lg">
+                <p class="border-l-4 border-or pl-4 py-1 bg-noir-dark/50">
+                  Fondé en 2015, <span class="text-or font-medium">Parfurama</span> réinvente l'expérience olfactive avec des créations uniques.
+                </p>
+                
+                <p>
+                  Nos maîtres parfumeurs, formés à Grasse, marient <span class="text-or-light">tradition et innovation</span> pour capturer l'essence de votre personnalité.
+                </p>
       
-      <!-- Overlay noir pour meilleure lisibilité -->
-      <div class="absolute inset-0 bg-noir/60"></div>
-    </div>
-  
-    <!-- Contenu texte -->
-    <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
-      <!-- Nom de la boutique -->
-      <h1 class="text-5xl md:text-7xl font-serif font-bold text-or mb-4 animate-fadeIn">
-        Parfurama
-      </h1>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-or mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>250+ ingrédients rares</span>
+                  </li>
+                  <li class="flex items-start">
+                    <!-- Icône check -->
+                    <span>500+ clients satisfaits</span>
+                  </li>
+                </ul>
       
-      <!-- Slogan -->
-      <p class="text-xl md:text-2xl text-or-light max-w-2xl mx-auto mb-8 animate-fadeIn delay-100">
-        Description !!!
-      </p>
-      
-      <!-- Bouton CTA -->
-      <div class="animate-fadeIn delay-200">
-        <a href="#catalogue" class="bg-or hover:bg-or-dark text-noir font-bold py-3 px-8 rounded-full text-lg transition transform hover:scale-105">
-          Découvrir nos créations
-        </a>
-      </div>
-      
-      <!-- Indicateurs de diaporama -->
-      <div class="absolute bottom-10 flex space-x-2">
-        <button class="w-3 h-3 rounded-full bg-or/80 hover:bg-or transition slide-dot active" data-slide="1"></button>
-        <button class="w-3 h-3 rounded-full bg-or/80 hover:bg-or transition slide-dot" data-slide="2"></button>
-        <button class="w-3 h-3 rounded-full bg-or/80 hover:bg-or transition slide-dot" data-slide="3"></button>
-      </div>
-    </div>
-  </section>
+                <button class="mt-6 bg-or hover:bg-or-dark text-noir font-bold py-3 px-8 rounded-full transition">
+                  Rencontrer nos parfumeurs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <script src="/js/script.js"></script>
 </body>
