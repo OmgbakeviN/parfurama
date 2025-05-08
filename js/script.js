@@ -41,3 +41,59 @@ let currentSlide = 1;
       showSlide(parseInt(dot.getAttribute('data-slide')));
     });
   });
+
+  //script u diapo
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('parfum-slider');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentIndex = 0;
+    const slideCount = 5; // Nombre total de slides
+
+    // Auto-défilement
+    let interval = setInterval(nextSlide, 5000);
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Mettre à jour les indicateurs
+      indicators.forEach((ind, index) => {
+        ind.classList.toggle('active', index === currentIndex);
+        ind.classList.toggle('bg-or/70', index === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateSlider();
+    }
+
+    // Contrôles manuels
+    nextBtn.addEventListener('click', () => {
+      clearInterval(interval);
+      nextSlide();
+      interval = setInterval(nextSlide, 5000);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      clearInterval(interval);
+      prevSlide();
+      interval = setInterval(nextSlide, 5000);
+    });
+
+    // Navigation par indicateurs
+    indicators.forEach(indicator => {
+      indicator.addEventListener('click', () => {
+        clearInterval(interval);
+        currentIndex = parseInt(indicator.getAttribute('data-slide'));
+        updateSlider();
+        interval = setInterval(nextSlide, 5000);
+      });
+    });
+  });

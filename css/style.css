@@ -8,3 +8,15 @@
   }
   .delay-100 { animation-delay: 0.2s; }
   .delay-200 { animation-delay: 0.4s; }
+
+  /* diapo menu */
+  .indicator.active {
+    background-color: rgba(212, 175, 55, 0.7);
+    transform: scale(1.2);
+  }
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
