@@ -97,3 +97,22 @@ let currentSlide = 1;
       });
     });
   });
+
+
+  // whatsapp form
+  document.getElementById('rdvForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const date = document.getElementById('date').value;
+    const message = document.getElementById('message').value;
+    
+    const whatsappText = `Nouvelle demande de RDV%0A%0A` +
+                         `*Nom:* ${name}%0A` +
+                         `*Téléphone:* ${phone}%0A` +
+                         `*Date souhaitée:* ${date}%0A` +
+                         `*Message:* ${message || 'Non spécifié'}`;
+    
+    window.open(`https://wa.me/33612345678?text=${whatsappText}`, '_blank');
+  });

@@ -43,6 +43,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- Pour les icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-marron-dark">
     <!-- Navigation Bar -->
@@ -373,6 +375,106 @@
       </div>
     </div>
   </section>
+
+  <!-- Section RDV + Contact -->
+  <section class="py-20 bg-noir-dark text-or-light">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Formulaire RDV -->
+        <div class="lg:w-1/2 bg-noir rounded-xl p-8 shadow-xl border border-or/10">
+          <h2 class="text-3xl font-serif text-or mb-2">Prendre Rendez-vous</h2>
+          <p class="mb-6">Réservez votre consultation personnalisée avec nos maîtres parfumeurs</p>
+          
+          <form id="rdvForm" class="space-y-6">
+            <div>
+              <label for="name" class="block mb-2">Nom complet*</label>
+              <input type="text" id="name" required 
+                    class="w-full bg-noir-dark border border-or/20 rounded-lg px-4 py-3 focus:border-or focus:ring-or/50">
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="email" class="block mb-2">Email</label>
+                <input type="email" id="email" 
+                      class="w-full bg-noir-dark border border-or/20 rounded-lg px-4 py-3">
+              </div>
+              <div>
+                <label for="phone" class="block mb-2">Téléphone*</label>
+                <input type="tel" id="phone" required
+                      class="w-full bg-noir-dark border border-or/20 rounded-lg px-4 py-3">
+              </div>
+            </div>
+            
+            <div>
+              <label for="date" class="block mb-2">Date souhaitée*</label>
+              <input type="date" id="date" required
+                    class="w-full bg-noir-dark border border-or/20 rounded-lg px-4 py-3">
+            </div>
+            
+            <div>
+              <label for="message" class="block mb-2">Vos attentes</label>
+              <textarea id="message" rows="3"
+                        class="w-full bg-noir-dark border border-or/20 rounded-lg px-4 py-3"></textarea>
+            </div>
+            
+            <button type="submit" 
+                    class="w-full bg-or hover:bg-or-dark text-noir font-bold py-3 px-6 rounded-lg transition flex items-center justify-center">
+              <i class="fab fa-whatsapp text-xl mr-2"></i> Envoyer via WhatsApp
+            </button>
+          </form>
+        </div>
+        
+        <!-- Infos Contact -->
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-serif text-or mb-6">Nous trouver</h2>
+          
+          <div class="space-y-8">
+            <!-- Adresse -->
+            <div class="flex items-start">
+              <div class="text-or text-2xl mr-4 mt-1">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-serif text-or-light mb-2">Adresse</h3>
+                <p>12 Rue des Parfumeurs<br>75001 Paris</p>
+              </div>
+            </div>
+            
+            <!-- Horaires -->
+            <div class="flex items-start">
+              <div class="text-or text-2xl mr-4 mt-1">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-serif text-or-light mb-2">Horaires</h3>
+                <p><strong>Lun-Ven:</strong> 10h-19h<br>
+                <strong>Sam:</strong> 10h-20h<br>
+                <strong>Dim:</strong> Fermé</p>
+              </div>
+            </div>
+            
+            <!-- Contact -->
+            <div class="flex items-start">
+              <div class="text-or text-2xl mr-4 mt-1">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-serif text-or-light mb-2">Contact</h3>
+                <p class="mb-2"><a href="tel:+33123456789" class="hover:text-or">+33 1 23 45 67 89</a></p>
+                <p><a href="mailto:contact@parfurama.com" class="hover:text-or">contact@parfurama.com</a></p>
+              </div>
+            </div>
+            
+            <!-- Carte -->
+            <div class="rounded-lg overflow-hidden border border-or/20 mt-8">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.8683566918035!2d11.499417799999991!3d3.8384238000000095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf6d6c7b16d1%3A0x65fc06fc551aa6f!2sparfurama%20-%20cave%20%C3%A0%20parfum!5e0!3m2!1sen!2scm!4v1746802078787!5m2!1sen!2scm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
     <script src="/js/script.js"></script>
