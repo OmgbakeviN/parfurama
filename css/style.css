@@ -20,3 +20,8 @@
   .hover-scale:hover {
     transform: scale(1.03);
   }
+
+  /* footer style */
+  .bg-noir-darker {
+    background-color: #0a0a0a;
+  }
