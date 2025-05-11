@@ -114,5 +114,5 @@ let currentSlide = 1;
                          `*Date souhaitée:* ${date}%0A` +
                          `*Message:* ${message || 'Non spécifié'}`;
     
-    window.open(`https://wa.me/33612345678?text=${whatsappText}`, '_blank');
+    window.open(`https://wa.me/237620872728?text=${whatsappText}`, '_blank');
   });

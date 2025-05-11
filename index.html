@@ -62,7 +62,7 @@
             
             <!-- Liens navigation (gauche) -->
             <div class="hidden md:flex space-x-8">
-                <a href="#" class="hover:text-or transition">Accueil</a>
+                <a href="index.html" class="hover:text-or transition">Accueil</a>
                 <a href="#" class="hover:text-or transition">Nos Parfums</a>
                 <a href="#" class="hover:text-or transition">Ateliers</a>
             </div>
@@ -76,11 +76,11 @@
             
             <!-- Liens navigation (droite) -->
             <div class="hidden md:flex space-x-8 ml-auto">
-                <a href="#" class="text-or transition">Accueil</a>
+                <a href="index.html" class="text-or transition">Accueil</a>
                 <a href="#" class="text-or transition">Nos Parfums</a>
-                <a href="#" class="text-or transition">Notre Histoire</a>
-                <a href="#" class="text-or transition">Contact</a>
-                <a href="#" class="text-noir bg-or hover:bg-or-dark px-4 py-2 rounded-full transition">Réservation</a>
+                <a href="#about" class="text-or transition">Notre Histoire</a>
+                <a href="#contact" class="text-or transition">Contact</a>
+                <a href="#rdv" class="text-noir bg-or hover:bg-or-dark px-4 py-2 rounded-full transition">Réservation</a>
             </div>
             
             <!-- Menu hamburger -->
@@ -92,11 +92,11 @@
         <!-- Menu mobile -->
         <div class="md:hidden hidden absolute top-full left-0 w-full bg-noir-dark border-t border-or/10 py-4 px-6" id="mobileMenu">
             <div class="flex flex-col space-y-4">
-                <a href="#" class="hover:bg-or hover:text-noir text-or transition">Accueil</a>
+                <a href="index.html" class="hover:bg-or hover:text-noir text-or transition">Accueil</a>
                 <a href="#" class="hover:bg-or hover:text-noir text-or transition">Nos Parfums</a>
-                <a href="#" class="hover:bg-or hover:text-noir text-or transition">Notre Histoire</a>
-                <a href="#" class="hover:bg-or hover:text-noir text-or transition">Contact</a>
-                <a href="#" class="text-noir bg-or hover:bg-or-dark px-4 py-2 rounded-full text-center transition">Réservation</a>
+                <a href="#about" class="hover:bg-or hover:text-noir text-or transition">Notre Histoire</a>
+                <a href="#contact" class="hover:bg-or hover:text-noir text-or transition">Contact</a>
+                <a href="#rdv" class="text-noir bg-or hover:bg-or-dark px-4 py-2 rounded-full text-center transition">Réservation</a>
             </div>
         </div>
     </nav>
@@ -161,7 +161,7 @@
         <div class="container mx-auto px-6">
           <!-- Titre Section -->
           <h2 class="text-4xl md:text-5xl font-serif text-center mb-16 text-or">
-            <span class="border-b-2 border-or pb-2">Notre Histoire</span>
+            <span class="border-b-2 border-or pb-2" id="about">Notre Histoire</span>
           </h2>
       
           <div class="flex flex-col lg:flex-row items-center gap-12">
@@ -382,7 +382,7 @@
       <div class="flex flex-col lg:flex-row gap-12">
         <!-- Formulaire RDV -->
         <div class="lg:w-1/2 bg-noir rounded-xl p-8 shadow-xl border border-or/10">
-          <h2 class="text-3xl font-serif text-or mb-2">Prendre Rendez-vous</h2>
+          <h2 class="text-3xl font-serif text-or mb-2" id="rdv">Prendre Rendez-vous</h2>
           <p class="mb-6">Réservez votre consultation personnalisée avec nos maîtres parfumeurs</p>
           
           <form id="rdvForm" class="space-y-6">
@@ -436,7 +436,7 @@
               </div>
               <div>
                 <h3 class="text-xl font-serif text-or-light mb-2">Adresse</h3>
-                <p>12 Rue des Parfumeurs<br>75001 Paris</p>
+                <p>Carrefour Olympique<br>Yaounde</p>
               </div>
             </div>
             
@@ -454,14 +454,14 @@
             </div>
             
             <!-- Contact -->
-            <div class="flex items-start">
+            <div class="flex items-start" id="contact">
               <div class="text-or text-2xl mr-4 mt-1">
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div>
                 <h3 class="text-xl font-serif text-or-light mb-2">Contact</h3>
-                <p class="mb-2"><a href="tel:+33123456789" class="hover:text-or">+33 1 23 45 67 89</a></p>
-                <p><a href="mailto:contact@parfurama.com" class="hover:text-or">contact@parfurama.com</a></p>
+                <p class="mb-2"><a href="tel:+237620872728" class="hover:text-or">+(237) 620 872 728</a></p>
+                <p><a href="la.cave.a.parfums1@gmail.com" class="hover:text-or">la.cave.a.parfums1@gmail.com</a></p>
               </div>
             </div>
             
