@@ -140,7 +140,7 @@ function initCreatorSliders() {
   });
 
   // Initialisation des sliders
-  const creators = ['dior', 'chanel', 'guerlain']; // Ajoutez d'autres
+  const creators = ['dior', 'chanel', 'guerlain', 'armani']; // Ajoutez d'autres
   
   creators.forEach(creator => {
     const slider = document.getElementById(`${creator}-slider`);
