@@ -116,3 +116,72 @@ let currentSlide = 1;
     
     window.open(`https://wa.me/237620872728?text=${whatsappText}`, '_blank');
   });
+
+// section catalogue
+// Filtrage des créateurs
+        document.querySelectorAll('.creator-filter').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.creator-filter').forEach(b => b.classList.remove('active-creator'));
+                this.classList.add('active-creator');
+                
+                const creator = this.dataset.creator;
+                const sections = document.querySelectorAll('.creator-section');
+                
+                if (creator === 'all') {
+                    sections.forEach(section => section.style.display = 'block');
+                } else {
+                    sections.forEach(section => {
+                        section.style.display = section.dataset.creator === creator ? 'block' : 'none';
+                    });
+                }
+            });
+        });
+
+        // Initialisation des sliders
+        const creators = ['dior', 'ysl']; // Ajoutez d'autres créateurs
+        
+        creators.forEach(creator => {
+            const slider = document.getElementById(`${creator}-slider`);
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            // Auto-slide
+            let interval = setInterval(() => {
+                slider.scrollLeft += slider.offsetWidth;
+                if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
+                    slider.scrollLeft = 0;
+                }
+            }, 5000);
+
+            // Pause on hover
+            slider.addEventListener('mouseenter', () => clearInterval(interval));
+            slider.addEventListener('mouseleave', () => {
+                interval = setInterval(() => {
+                    slider.scrollLeft += slider.offsetWidth;
+                    if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
+                        slider.scrollLeft = 0;
+                    }
+                }, 5000);
+            });
+
+            // Navigation buttons
+            document.querySelector(`.slider-prev[data-creator="${creator}"]`).addEventListener('click', () => {
+                slider.scrollLeft -= slider.offsetWidth;
+            });
+
+            document.querySelector(`.slider-next[data-creator="${creator}"]`).addEventListener('click', () => {
+                slider.scrollLeft += slider.offsetWidth;
+            });
+        });
+
+        // Barre de recherche
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.parfum-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });

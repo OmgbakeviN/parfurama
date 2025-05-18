@@ -1,51 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
-    <!-- <meta name="theme-color" content="#000000"> -->
-    <meta property="og:title" content="Parfurama - Bar à Parfums d'Exception">
-    <meta property="og:description" content="Elevation et exaltation des sens">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipOuZ1W_JH6Nxzxa5bkCPZA-5bnl0MvxcFZkVbnM=s680-w680-h510-rw">
-    <title>Parfurama - Catalogue</title>
+    <title>Catalogue par Créateurs - Parfurama</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-            extend: {
-                colors: {
-                // Noir élégant
-                noir: {
-                    light: '#3a3a3a',   // Noir légèrement éclairci
-                    DEFAULT: '#1a1a1a', // Noir profond
-                    dark: '#0a0a0a',    // Noir presque pur
-                },
-                // Marron chaleureux
-                marron: {
-                    light: '#a78a7f',   // Marron clair (cuir)
-                    DEFAULT: '#6b4f4b', // Marron terreux
-                    dark: '#4a302b',    // Marron foncé (chocolat)
-                },
-                // Or métallique
-                or: {
-                    light: '#f8e6c0',   // Or pâle
-                    DEFAULT: '#d4af37', // Or classique
-                    dark: '#b08d26',    // Or vieilli
-                }
-                }
-            }
-            }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .slider-container {
+            scroll-snap-type: x mandatory;
         }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- Pour les icônes Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        .slider-item {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+        }
+        .active-creator {
+            background-color: #d4af37;
+            color: #1a1a1a;
+        }
+    </style>
 </head>
 <body class="bg-noir text-or-light">
     <!-- Barre de recherche -->
@@ -77,6 +50,7 @@
         </div>
     </div>
 
+    <!-- Catalogue par créateur -->
     <main class="pb-20">
         <!-- Section Christian Dior -->
         <section class="creator-section py-12" data-creator="dior">
@@ -122,6 +96,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Section Yves Saint Laurent -->
         <section class="creator-section py-12" data-creator="ysl">
             <!-- Même structure que la section Dior -->
@@ -130,6 +105,74 @@
         <!-- Ajoutez d'autres sections créateurs -->
     </main>
 
-    <script src="/js/script.js"></script>
-</body >
+    <script>
+        // Filtrage des créateurs
+        document.querySelectorAll('.creator-filter').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.creator-filter').forEach(b => b.classList.remove('active-creator'));
+                this.classList.add('active-creator');
+                
+                const creator = this.dataset.creator;
+                const sections = document.querySelectorAll('.creator-section');
+                
+                if (creator === 'all') {
+                    sections.forEach(section => section.style.display = 'block');
+                } else {
+                    sections.forEach(section => {
+                        section.style.display = section.dataset.creator === creator ? 'block' : 'none';
+                    });
+                }
+            });
+        });
+
+        // Initialisation des sliders
+        const creators = ['dior', 'ysl']; // Ajoutez d'autres créateurs
+        
+        creators.forEach(creator => {
+            const slider = document.getElementById(`${creator}-slider`);
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            // Auto-slide
+            let interval = setInterval(() => {
+                slider.scrollLeft += slider.offsetWidth;
+                if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
+                    slider.scrollLeft = 0;
+                }
+            }, 5000);
+
+            // Pause on hover
+            slider.addEventListener('mouseenter', () => clearInterval(interval));
+            slider.addEventListener('mouseleave', () => {
+                interval = setInterval(() => {
+                    slider.scrollLeft += slider.offsetWidth;
+                    if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
+                        slider.scrollLeft = 0;
+                    }
+                }, 5000);
+            });
+
+            // Navigation buttons
+            document.querySelector(`.slider-prev[data-creator="${creator}"]`).addEventListener('click', () => {
+                slider.scrollLeft -= slider.offsetWidth;
+            });
+
+            document.querySelector(`.slider-next[data-creator="${creator}"]`).addEventListener('click', () => {
+                slider.scrollLeft += slider.offsetWidth;
+            });
+        });
+
+        // Barre de recherche
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.parfum-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
 </html>

@@ -25,3 +25,16 @@
   .bg-noir-darker {
     background-color: #0a0a0a;
   }
+
+  /* section fichier catalogue */
+  .slider-container {
+            scroll-snap-type: x mandatory;
+        }
+  .slider-item {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+  }
+  .active-creator {
+      background-color: #d4af37;
+      color: #1a1a1a;
+  }
