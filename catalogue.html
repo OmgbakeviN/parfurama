@@ -49,7 +49,7 @@
 </head>
 <body class="bg-noir text-or-light">
     <!-- Barre de recherche -->
-    <section class="pt-16 pb-8 px-6">
+    <section class="pt-8 pb-8 px-6">
         <div class="container mx-auto">
             <div class="relative max-w-3xl mx-auto">
                 <input type="text" id="searchInput" placeholder="Rechercher par parfum, créateur ou notes..." 
@@ -77,6 +77,12 @@
                 </button>
                 <button class="creator-filter bg-noir hover:bg-or/10 px-5 py-2 rounded-full whitespace-nowrap border border-or/10" data-creator="armani">
                     Armani
+                </button>
+                <button class="creator-filter bg-noir hover:bg-or/10 px-5 py-2 rounded-full whitespace-nowrap border border-or/10" data-creator="givenchy">
+                    Givenchy
+                </button>
+                <button class="creator-filter bg-noir hover:bg-or/10 px-5 py-2 rounded-full whitespace-nowrap border border-or/10" data-creator="lattafa">
+                    Lattafa
                 </button>
                 <!-- Ajoutez d'autres créateurs -->
             </div>
@@ -443,44 +449,223 @@
             </div>
         </section>
         
-        <!-- Section Yves Saint Laurent -->
-        <section class="creator-section py-12" data-creator="yves">
+        <!-- Section Givenchy -->
+        <section class="creator-section py-12" data-creator="givenchy">
             <div class="container mx-auto px-6">
                 <div class="flex items-center justify-between mb-8">
                     <h2 class="text-3xl font-serif text-or">
-                        <span class="border-b-2 border-or pb-1">Yves Saint Laurent</span>
+                        <span class="border-b-2 border-or pb-1">Givenchy</span>
                     </h2>
                     <div class="flex space-x-3">
-                        <button class="slider-prev bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="yves">
+                        <button class="slider-prev bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="givenchy">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        <button class="slider-next bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="yves">
+                        <button class="slider-next bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="givenchy">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="relative">
-                    <div class="slider-container flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" id="yves-slider">
+                    <div class="slider-container flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" id="givenchy-slider">
                         <!-- Parfum 1 -->
                         <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
                             <div class="p-6">
                                 <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
-                                <h3 class="text-2xl font-serif text-or mb-4">Sauvage Elixir</h3>
-                                <p class="mb-6">Une interprétation intense avec lavande, vanille et réglisse.</p>
+                                <h3 class="text-2xl font-serif text-or mb-4">L'Interdit</h3>
+                                <p class="mb-6">Un parfum audacieux et addictif mêlant fleur d’oranger, jasmin et patchouli, symbole d’élégance rebelle.</p>
                                 <div class="flex flex-wrap gap-2 mb-8">
                                     <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
                                     <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
                                 </div>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=880&q=80" 
+                            <img src="https://bogart-april-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/bfb5a941d2b1b64451f0171f863a11340aca8304_eecd1a57-1322-44f0-8e04-front.jpeg" 
                                  alt="Sauvage Elixir" 
                                  class="w-full h-64 object-cover rounded-b-xl">
                         </div>
                         
                         <!-- Parfum 2 -->
                         <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
-                            
+                            <div class="p-6">
+                                <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
+                                <h3 class="text-2xl font-serif text-or mb-4">Givenchy</h3>
+                                <p class="mb-6">un classique : une signature raffinée alliant fraîcheur aromatique et sensualité boisée.</p>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
+                                </div>
+                            </div>
+                            <img src="https://cdn.shoplightspeed.com/shops/644833/files/31445183/800x800x3/givenchy-givenchy-blue-label-pour-homme-eau-de-toi.jpg" 
+                                 alt="Sauvage Elixir" 
+                                 class="w-full h-64 object-cover rounded-b-xl">
+                        </div>
+                        <!-- Ajoutez d'autres parfums Dior -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section JLattafa -->
+        <section class="creator-section py-12" data-creator="lattafa">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-serif text-or">
+                        <span class="border-b-2 border-or pb-1">Lattafa(parfums orientaux)</span>
+                    </h2>
+                    <div class="flex space-x-3">
+                        <button class="slider-prev bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="lattafa">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-next bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="lattafa">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="slider-container flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" id="lattafa-slider">
+                        <!-- Parfum 1 -->
+                        <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
+                            <div class="p-6">
+                                <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
+                                <h3 class="text-2xl font-serif text-or mb-4">Musc Tahara</h3>
+                                <p class="mb-6">Un musc blanc pur et doux, à l’odeur fraîche, propre et légèrement sucrée, souvent utilisé après la douche.</p>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
+                                </div>
+                            </div>
+                            <img src="https://m.media-amazon.com/images/I/51qFp2a9VXL._AC_UF894,1000_QL80_DpWeblab_.jpg" 
+                                 alt="Sauvage Elixir" 
+                                 class="w-full h-64 object-cover rounded-b-xl">
+                        </div>
+                        
+                        <!-- Parfum 2 -->
+                        <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
+                            <div class="p-6">
+                                <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
+                                <h3 class="text-2xl font-serif text-or mb-4">Yara</h3>
+                                <p class="mb-6">Un parfum féminin sucré et crémeux aux notes tropicales, florales et vanillées, très apprécié pour sa douceur enveloppante.</p>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
+                                </div>
+                            </div>
+                            <img src="https://prestigesenteur.fr/cdn/shop/files/272.jpg?v=1730513184" 
+                                 alt="Sauvage Elixir" 
+                                 class="w-full h-64 object-cover rounded-b-xl">
+                        </div>
+                        <!-- Ajoutez d'autres parfums Dior -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Montale -->
+        <section class="creator-section py-12" data-creator="montale">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-serif text-or">
+                        <span class="border-b-2 border-or pb-1">Montale</span>
+                    </h2>
+                    <div class="flex space-x-3">
+                        <button class="slider-prev bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="montale">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-next bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="montale">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="slider-container flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" id="montale-slider">
+                        <!-- Parfum 1 -->
+                        <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
+                            <div class="p-6">
+                                <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
+                                <h3 class="text-2xl font-serif text-or mb-4">Black Aoud</h3>
+                                <p class="mb-6">Un parfum intense et mystérieux mêlant oud, rose et patchouli, signature orientale par excellence.</p>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
+                                </div>
+                            </div>
+                            <img src="https://shop.campomarzio70.it/cdn/shop/files/MONTALE-PARIS-Black-Aoud-Intense-2-100ml-Campomarzio70.jpg?v=1729783221&width=320" 
+                                 alt="Sauvage Elixir" 
+                                 class="w-full h-64 object-cover rounded-b-xl">
+                        </div>
+                        
+                        <!-- Parfum 2 -->
+                        <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
+                            <div class="p-6">
+                                <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
+                                <h3 class="text-2xl font-serif text-or mb-4">Arabians Tonka</h3>
+                                <p class="mb-6">Une fragrance opulente et chaleureuse, combinant oud, fève tonka et épices pour un sillage captivant.</p>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
+                                </div>
+                            </div>
+                            <img src="https://starkmarket.ma/wp-content/uploads/2023/05/43-1.jpg" 
+                                 alt="Sauvage Elixir" 
+                                 class="w-full h-64 object-cover rounded-b-xl">
+                        </div>
+                        <!-- Ajoutez d'autres parfums Dior -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Paco Rabanne -->
+        <section class="creator-section py-12" data-creator="paco">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-serif text-or">
+                        <span class="border-b-2 border-or pb-1">Paco Rabanne</span>
+                    </h2>
+                    <div class="flex space-x-3">
+                        <button class="slider-prev bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="paco">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-next bg-or/10 hover:bg-or/20 text-or p-2 rounded-full" data-creator="paco">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="slider-container flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" id="paco-slider">
+                        <!-- Parfum 1 -->
+                        <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
+                            <div class="p-6">
+                                <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
+                                <h3 class="text-2xl font-serif text-or mb-4">Invictus</h3>
+                                <p class="mb-6">Un parfum frais et puissant aux notes marines, boisées et ambrées, incarnant la victoire et l’énergie.</p>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
+                                </div>
+                            </div>
+                            <img src="https://ascentluxurycosmetics.com.au/cdn/shop/files/paco-rabanne-invictus-parfum-ascent-luxury-cosmetics-3.png?v=1742348050" 
+                                 alt="Sauvage Elixir" 
+                                 class="w-full h-64 object-cover rounded-b-xl">
+                        </div>
+                        
+                        <!-- Parfum 2 -->
+                        <div class="slider-item w-80 flex-shrink-0 bg-noir-dark rounded-xl border border-or/10 parfum-card">
+                            <div class="p-6">
+                                <span class="bg-or/10 text-or px-4 py-2 rounded-full text-sm mb-4 inline-block">Nouveauté</span>
+                                <h3 class="text-2xl font-serif text-or mb-4">Phantom</h3>
+                                <p class="mb-6">Un parfum futuriste aux notes de lavande, citron et vanille, à la fois doux, fruité et aromatique.</p>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Ambré</span>
+                                    <span class="bg-noir px-3 py-1 rounded-full text-sm">Boisé</span>
+                                </div>
+                            </div>
+                            <img src="https://marionnaud.ma/cdn/shop/files/Captured_ecran2023-09-11a10.32.45_1000x.png?v=1694424773" 
+                                 alt="Sauvage Elixir" 
+                                 class="w-full h-64 object-cover rounded-b-xl">
                         </div>
                         <!-- Ajoutez d'autres parfums Dior -->
                     </div>
