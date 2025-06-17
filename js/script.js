@@ -140,7 +140,7 @@ function initCreatorSliders() {
   });
 
   // Initialisation des sliders
-  const creators = ['dior', 'chanel', 'guerlain', 'armani','givenchy','lattafa','montale','paco','jean','victoria','lancome','burberry','narciso']; // Ajoutez d'autres
+  const creators = ['dior', 'chanel', 'guerlain', 'armani','givenchy','lattafa','montale','paco','jean','victoria','lancome','burberry','narciso','louis']; // Ajoutez d'autres
   
   creators.forEach(creator => {
     const slider = document.getElementById(`${creator}-slider`);
